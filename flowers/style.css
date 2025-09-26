@@ -179,3 +179,14 @@ g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
 [id^=Flourish] {
   visibility: hidden;
 }
+
+/* Estilos para las animaciones de paths */
+path[id^=Stem] {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+path[id^=Stroke] {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}

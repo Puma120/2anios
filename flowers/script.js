@@ -9,8 +9,8 @@ var stemGroup3 = ['#Stem10_1_', '#Stem11_1_', '#Stem12a_1_', '#Stem12b_1_'];
 var stemGroup4 = ['#Stem26_1_', '#Stem27_1_', '#Stem28a_1_', '#Stem28b_1_'];
 var stemGroup5 = ['#Stem13a_1_', '#Stem13b_1_', '#Stem13c_1_'];
 var stemGroup6 = ['#Stem29a_1_', '#Stem29b_1_', '#Stem29c_1_'];
-var stemVarsFrom = { drawSVG: "0% 0%", autoAlpha: 1 };
-var stemVarsTo = { drawSVG: "0% 100%", duration:2, stagger:0.5 };
+var stemVarsFrom = { strokeDasharray: "1000", strokeDashoffset: "1000", autoAlpha: 1 };
+var stemVarsTo = { strokeDashoffset: "0", duration:2, stagger:0.5 };
 
 var leafGroup1 = ['#Leaf2_1_','#Leaf17_1_'];
 var leafGroup2 = ['#Leaf4_1_','#Leaf5a_1_', '#Leaf5b_1_'];
@@ -30,12 +30,12 @@ var dots = $('#Dots_1_');
 
 var tl = gsap.timeline()
 .set('#Footer_group_1_', {autoAlpha: 1})
-.fromTo( ['#Stem16_1_','#Stem1_1_'], {drawSVG: "0% 0%" }, {duration:1.5, drawSVG: "0% 100%" }, 'start')
+.fromTo( ['#Stem16_1_','#Stem1_1_'], {strokeDasharray: "1000", strokeDashoffset: "1000" }, {duration:1.5, strokeDashoffset: "0" }, 'start')
 .fromTo('#BaseGroup16_1_ path', {autoAlpha: 1, scale: 0, transformOrigin: '-10% 130%'}, {duration:1, scale:1}, 1.2, 'flower1')
 .fromTo('#PinkFlowerGroup16_1_', {autoAlpha: 1, scale: 0, transformOrigin: '35% 110%'}, {duration:2, scale:1}, 'flower1-=0.55')
 .fromTo('#BaseGroup1_1_ path', {autoAlpha: 1, scale: 0, transformOrigin: '90% 130%'}, {duration:1, scale:1}, 1.2, 'flower1')
 .fromTo('#PinkFlowerGroup1_1_', {autoAlpha: 1, scale: 0, transformOrigin: '65% 110%'}, {duration:2, scale:1}, 'flower1-=0.55')
-.fromTo( ['#Stem9_1_','#Stem25_1_'], {drawSVG: "0% 0%",  autoAlpha: 1 }, {duration:2, drawSVG: "0% 100%" }, 'flower1+=0.5')
+.fromTo( ['#Stem9_1_','#Stem25_1_'], {strokeDasharray: "1000", strokeDashoffset: "1000",  autoAlpha: 1 }, {duration:2, strokeDashoffset: "0" }, 'flower1+=0.5')
 .fromTo('#BaseGroup9_1_ path', {autoAlpha: 1, scale: 0, transformOrigin: '-10% 130%'}, {duration:1, scale:1}, 'flower2-=0.5')
 .fromTo('#PinkFlowerGroup9_1_', {autoAlpha: 1, scale: 0, transformOrigin: '5% 110%'}, {duration:2, scale:1}, 'flower2')
 .fromTo('#BaseGroup25_1_ path', {autoAlpha: 1, scale: 0, transformOrigin: '105% 130%'}, {duration:1, scale:1}, 'flower2-=0.5')
@@ -66,10 +66,10 @@ var tl = gsap.timeline()
 .fromTo(budGroup5, {autoAlpha: 1, scale: 0, transformOrigin:gsap.utils.wrap(['-50% 120%', '150% 120%']) }, {duration:2, scale:1},  'flower2-=0.5')
 
 //strokes
-.fromTo(strokesLeftBottom, stemVarsFrom, { drawSVG: "0% 100%", duration:2, stagger:1 }, 1)
-.fromTo(strokesRightBottom, stemVarsFrom, { drawSVG: "0% 100%", duration:2, stagger:1 }, 1)
-.fromTo(strokesLeftTop, stemVarsFrom, { drawSVG: "0% 100%", duration:2, stagger:1 }, 'flower1+=0.5')
-.fromTo(strokesRightTop, stemVarsFrom, { drawSVG: "0% 100%", duration:2, stagger:1 }, 'flower1+=0.5')
+.fromTo(strokesLeftBottom, stemVarsFrom, { strokeDashoffset: "0", duration:2, stagger:1 }, 1)
+.fromTo(strokesRightBottom, stemVarsFrom, { strokeDashoffset: "0", duration:2, stagger:1 }, 1)
+.fromTo(strokesLeftTop, stemVarsFrom, { strokeDashoffset: "0", duration:2, stagger:1 }, 'flower1+=0.5')
+.fromTo(strokesRightTop, stemVarsFrom, { strokeDashoffset: "0", duration:2, stagger:1 }, 'flower1+=0.5')
 
 //dots
 .fromTo(dots, 6, {autoAlpha: 0}, {autoAlpha: 1, ease: Expo.easeOut}, 'flower3+=1')
