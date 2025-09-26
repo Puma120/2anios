@@ -165,28 +165,21 @@ svg#flower-frame {
 
 
 
+/* Initial state for animated elements */
 #Footer_group_1_,
 [id^=PinkFlowerGroup],
-[id^=BaseGroup] path,
-[id^=LeafGroup] path,
-path[id^=Stroke],
-g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
-#Bud8_1_,
-#Bud10_1_,
-#Bud23_1_,
-#Bud26_1_,
+[id^=BaseGroup],
+[id^=LeafGroup],
+[id^=Stroke],
+[id^=BudGroup],
+[id^=Bud],
+[id^=Stem],
 [id^=Dots],
 [id^=Flourish] {
-  visibility: hidden;
+  opacity: 0;
 }
 
-/* Estilos para las animaciones de paths */
-path[id^=Stem] {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-}
-
-path[id^=Stroke] {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+/* Show the main container */
+#Footer_group_1_ {
+  opacity: 1;
 }
