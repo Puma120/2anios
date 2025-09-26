@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:gh-pages": "vite build && npm run copy-public",
-    "copy-public": "cp index.html dist/ && cp -r valentine dist/ && cp -r birthday dist/ && cp -r flowers dist/ && cp -r fireworks dist/",
+    "copy-public": "cp -r public/* dist/ && cp index.html dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
