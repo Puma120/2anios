@@ -165,8 +165,7 @@ svg#flower-frame {
 
 
 
-/* Initial state for animated elements */
-#Footer_group_1_,
+/* Initial state for ALL animated elements */
 [id^=PinkFlowerGroup],
 [id^=BaseGroup],
 [id^=LeafGroup],
@@ -175,11 +174,25 @@ svg#flower-frame {
 [id^=Bud],
 [id^=Stem],
 [id^=Dots],
-[id^=Flourish] {
+[id^=Flourish],
+[id^=BackPetals],
+[id^=Pollen],
+[id^=FrontPetals],
+[id^=Back],
+[id^=Lines],
+[id^=Leaf] {
   opacity: 0;
 }
 
 /* Show the main container */
 #Footer_group_1_ {
   opacity: 1;
+}
+
+/* Ensure all flower parts are initially hidden */
+path[id*="Petals"],
+path[id*="Pollen"], 
+path[id*="Back"],
+path[id*="Lines"] {
+  opacity: 0;
 }
