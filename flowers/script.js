@@ -102,5 +102,5 @@ function openLetter() {
 
 // Función para cerrar la carta y navegar a los fuegos artificiales
 function closeLetter() {
-  window.location.href = '/2anios/fireworks/';
+  window.location.href = '../fireworks/';
 }
