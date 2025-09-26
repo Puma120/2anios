@@ -26,8 +26,11 @@ jobs:
     - name: Build for GitHub Pages
       run: |
         npm run build
-        cp -r public/* dist/
         cp index.html dist/
+        cp -r valentine dist/
+        cp -r birthday dist/
+        cp -r flowers dist/
+        cp -r fireworks dist/
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
