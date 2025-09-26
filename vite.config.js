@@ -18,10 +18,8 @@ export default defineConfig({
     },
     assetsDir: 'assets',
     sourcemap: false,
-    minify: true,
-    copyPublicDir: true
+    minify: true
   },
-  publicDir: 'public',
   server: {
     port: 3000,
     open: true
