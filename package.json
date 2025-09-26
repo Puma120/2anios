@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp -r public dist/ 2>/dev/null || xcopy public dist\\public /E /I /Y",
+    "build:vercel": "vite build && cp -r public dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
